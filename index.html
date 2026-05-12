@@ -1,0 +1,784 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Seam Team LLC — Auto &amp; Marine Upholstery | Chichester, NH</title>
+<meta name="description" content="Hand-cut, carefully sewn interiors for cars, boats, motorcycles, RVs, power sports, and heavy equipment. Serving New Hampshire." />
+<meta property="og:title" content="Seam Team LLC — Auto &amp; Marine Upholstery" />
+<meta property="og:description" content="New Hampshire's Auto &amp; Marine Upholstery Team. Get a free quote today." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+/* =========================================================================
+   SEAM TEAM — Colors & Type Foundations
+   ========================================================================= */
+:root {
+  --emerald-500: #00A680;
+  --emerald-600: #00876A;
+  --emerald-700: #006A52;
+  --emerald-100: #C7F0E5;
+  --emerald-050: #E8F8F2;
+  --neon-500:    #B8FF3C;
+  --neon-600:    #99E020;
+  --black:       #000000;
+  --white:       #FFFFFF;
+  --carbon-950:  #0A0A0A;
+  --carbon-900:  #141414;
+  --carbon-800:  #1F1F1F;
+  --carbon-700:  #2E2E2E;
+  --carbon-500:  #6B6B6B;
+  --carbon-300:  #B5B5B5;
+  --carbon-200:  #D4D4D4;
+  --carbon-100:  #ECECEC;
+  --carbon-050:  #F5F5F4;
+  --signal-red:  #E5482F;
+  --color-bg:           var(--white);
+  --color-bg-paper:     var(--carbon-050);
+  --color-bg-inverse:   var(--carbon-950);
+  --color-fg:           var(--carbon-950);
+  --color-fg-muted:     var(--carbon-500);
+  --color-fg-subtle:    var(--carbon-300);
+  --color-fg-inverse:   var(--white);
+  --color-accent:       var(--emerald-500);
+  --color-accent-hover: var(--emerald-600);
+  --color-border:       var(--carbon-200);
+  --color-border-strong:var(--carbon-950);
+  --color-link:         var(--emerald-700);
+  --color-link-hover:   var(--carbon-950);
+  --font-display: "Anton", "Oswald", "Impact", sans-serif;
+  --font-sans:    "Archivo", ui-sans-serif, system-ui, sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+  --ease-out:  cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-1: 120ms;
+  --dur-2: 200ms;
+  --dur-3: 320ms;
+  --shadow-1: 0 1px 2px rgba(0,0,0,0.06), 0 0 0 1px rgba(0,0,0,0.04);
+  --shadow-2: 0 4px 12px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.04);
+  --shadow-3: 0 12px 32px rgba(0,0,0,0.14), 0 2px 6px rgba(0,0,0,0.06);
+  --st-accent: var(--emerald-500);
+  --st-accent-hover: var(--emerald-600);
+  --st-accent-fg: #ffffff;
+  color-scheme: light;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  color: var(--color-fg);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+body { margin: 0; padding: 0; font-size: 1rem; line-height: 1.5; text-wrap: pretty; }
+img { max-width: 100%; display: block; }
+button { font-family: inherit; cursor: pointer; }
+ul { list-style: none; padding: 0; margin: 0; }
+a { color: inherit; }
+::selection { background: var(--neon-500); color: var(--carbon-950); }
+
+/* BUTTONS */
+.st-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-sans); font-weight: 700; font-size: 14px;
+  text-transform: uppercase; letter-spacing: 0.06em;
+  padding: 12px 18px; border-radius: 6px; border: 0;
+  cursor: pointer; line-height: 1; text-decoration: none; white-space: nowrap;
+  transition: background var(--dur-2) var(--ease-out), transform var(--dur-1) var(--ease-out), color var(--dur-2) var(--ease-out);
+}
+.st-btn:active { transform: scale(0.98); }
+.st-btn:focus-visible { outline: 3px solid var(--neon-500); outline-offset: 2px; }
+.st-btn svg { width: 16px; height: 16px; }
+.st-btn-primary { background: var(--st-accent); color: var(--st-accent-fg); }
+.st-btn-primary:hover { background: var(--st-accent-hover); }
+.st-btn-ink { background: var(--carbon-950); color: var(--white); }
+.st-btn-ink:hover { background: var(--carbon-700); }
+.st-btn-xl { padding: 16px 22px; font-size: 16px; }
+
+/* EYEBROWS + DISPLAY */
+.st-eyebrow {
+  font-family: var(--font-sans); font-size: 12px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.12em;
+  color: var(--color-fg-muted); margin: 0 0 14px 0;
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.st-eyebrow::before { content: ''; width: 18px; height: 2px; background: var(--st-accent); display: inline-block; }
+.st-eyebrow-light { color: rgba(255,255,255,0.8); }
+.st-eyebrow-light::before { background: var(--neon-500); }
+.st-eyebrow-plain::before { display: none; }
+.st-display { font-family: var(--font-display); text-transform: uppercase; line-height: 0.92; letter-spacing: -0.01em; margin: 0; font-weight: 400; }
+.st-display-xl  { font-size: clamp(56px, 7.5vw, 112px); }
+.st-display-lg  { font-size: clamp(40px, 5.5vw, 76px); }
+.st-lede { font-size: 18px; line-height: 1.55; max-width: 56ch; margin: 24px 0 32px; color: var(--color-fg-muted); }
+.st-lede-light { color: rgba(255,255,255,0.78); }
+
+/* NAV */
+.st-nav {
+  position: sticky; top: 0; z-index: 20;
+  display: flex; align-items: center; gap: 24px;
+  padding: 14px 32px;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--color-border);
+  transition: background var(--dur-3) var(--ease-out), border-color var(--dur-3) var(--ease-out);
+}
+.st-nav.on-dark { background: rgba(10,10,10,0.65); border-bottom-color: rgba(255,255,255,0.08); }
+.st-nav.on-dark .st-nav-link { color: rgba(255,255,255,0.92); }
+.st-nav.on-dark .st-nav-link:hover { background: rgba(255,255,255,0.08); }
+.st-nav.on-dark .st-nav-link.on { background: var(--white); color: var(--carbon-950); }
+.st-nav.on-dark .st-nav-phone { color: rgba(255,255,255,0.7); }
+.st-nav-logo { display: flex; align-items: center; text-decoration: none; }
+.st-nav-logo img { height: 38px; width: auto; }
+.st-nav-list { display: flex; gap: 4px; flex: 1; margin-left: 16px; }
+.st-nav-link {
+  display: inline-block; padding: 8px 14px; border-radius: 6px;
+  font-size: 14px; font-weight: 600; text-decoration: none; color: var(--carbon-950);
+  transition: background var(--dur-1) var(--ease-out); cursor: pointer;
+}
+.st-nav-link:hover { background: var(--carbon-050); }
+.st-nav-link.on { background: var(--carbon-950); color: var(--white); }
+.st-nav-phone { font-family: var(--font-mono); font-size: 13px; font-weight: 500; color: var(--carbon-700); text-decoration: none; padding: 8px 12px; }
+
+/* HERO */
+.st-hero { position: relative; overflow: hidden; background: var(--carbon-950); color: var(--white); min-height: 720px; }
+.st-hero-bg { position: absolute; inset: 0; }
+.st-hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.42; filter: grayscale(0.15) contrast(1.05); }
+.st-hero::after {
+  content:''; position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.85) 100%);
+  pointer-events:none;
+}
+.st-hero-inner { position: relative; z-index: 2; padding: 120px 32px 140px; max-width: 1280px; margin: 0 auto; }
+.st-hero-inner .st-lede { color: rgba(255,255,255,0.78); }
+.st-hero-cta { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+.st-link-arrow {
+  color: var(--neon-500); border-color: var(--neon-500);
+  font-weight: 700; text-decoration: none; text-transform: uppercase;
+  font-size: 13px; letter-spacing: 0.08em; display: inline-flex; align-items: center; gap: 6px;
+  border-bottom: 2px solid currentColor; padding-bottom: 2px;
+}
+.st-link-arrow:hover { color: var(--white); border-color: var(--white); }
+.st-hero-stamp {
+  position: absolute; right: 48px; bottom: 56px; z-index: 3;
+  background: var(--emerald-500); color: var(--white);
+  padding: 16px 20px; display: flex; align-items: center; gap: 14px;
+  outline: 2px dashed rgba(255,255,255,0.55); outline-offset: -8px;
+  transform: rotate(-4deg); border-radius: 8px;
+}
+.st-stamp-num { font-family: var(--font-display); font-size: 56px; line-height: 1; }
+.st-stamp-lab { font-family: var(--font-sans); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; line-height: 1.2; }
+
+/* MARQUEE */
+.st-marquee { background: var(--carbon-950); color: var(--white); border-top: 1px solid var(--carbon-800); border-bottom: 1px solid var(--carbon-800); overflow: hidden; padding: 22px 0; }
+.st-marquee-track { display: flex; gap: 56px; width: max-content; animation: st-marquee 38s linear infinite; }
+.st-marquee-item {
+  font-family: var(--font-display); text-transform: uppercase;
+  font-size: clamp(36px, 4vw, 60px); line-height: 1; letter-spacing: 0.01em;
+  white-space: nowrap; display: inline-flex; align-items: center; gap: 56px;
+}
+.st-marquee-dot { width: 14px; height: 14px; border-radius: 999px; background: var(--neon-500); flex-shrink: 0; }
+.st-marquee-item .muted { -webkit-text-stroke: 1px var(--carbon-500); color: transparent; }
+@keyframes st-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* SERVICES */
+.st-services { padding: 112px 32px; max-width: 1280px; margin: 0 auto; }
+.st-section-head-row { display: flex; align-items: end; justify-content: space-between; gap: 32px; flex-wrap: wrap; margin-bottom: 56px; }
+.st-section-head-row p.st-lede { margin: 0; max-width: 44ch; flex: 0 1 480px; }
+.st-tile-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.st-tile {
+  position: relative; display: block; background: var(--white);
+  border: 1.5px solid var(--carbon-950); padding: 28px 24px 72px; border-radius: 10px;
+  text-decoration: none; color: var(--carbon-950);
+  transition: background var(--dur-2) var(--ease-out), color var(--dur-2) var(--ease-out), transform var(--dur-2) var(--ease-out);
+  min-height: 240px;
+}
+.st-tile svg { width: 28px; height: 28px; margin-bottom: 36px; }
+.st-tile-title { font-family: var(--font-display); text-transform: uppercase; font-size: 36px; font-weight: 400; margin: 0 0 6px; line-height: 0.95; letter-spacing: -0.005em; }
+.st-tile-sub { font-size: 14px; color: var(--color-fg-muted); margin: 0; line-height: 1.45; }
+.st-tile-go { position: absolute; right: 18px; bottom: 18px; width: 38px; height: 38px; border-radius: 999px; display: grid; place-items: center; background: var(--carbon-950); color: var(--white); transition: background var(--dur-2) var(--ease-out), transform var(--dur-2) var(--ease-out); }
+.st-tile-go svg { width: 16px; height: 16px; }
+.st-tile:hover { background: var(--carbon-950); color: var(--white); }
+.st-tile:hover .st-tile-sub { color: rgba(255,255,255,0.7); }
+.st-tile:hover .st-tile-go { background: var(--neon-500); color: var(--carbon-950); transform: rotate(-45deg); }
+
+/* PORTFOLIO */
+.st-portfolio { padding: 112px 32px 120px; background: var(--white); }
+.st-portfolio-inner { max-width: 1280px; margin: 0 auto; }
+.st-filter-row { display: flex; gap: 8px; margin-bottom: 32px; flex-wrap: wrap; border-bottom: 1.5px solid var(--carbon-950); padding-bottom: 16px; }
+.st-filter-btn { background: transparent; border: 0; padding: 8px 14px; border-radius: 999px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; cursor: pointer; color: var(--carbon-700); transition: all var(--dur-2) var(--ease-out); }
+.st-filter-btn:hover { background: var(--carbon-050); color: var(--carbon-950); }
+.st-filter-btn.on { background: var(--carbon-950); color: var(--white); }
+.st-filter-count { font-family: var(--font-mono); font-size: 11px; opacity: 0.6; margin-left: 4px; font-weight: 500; }
+.st-pf-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.st-pf-card { position: relative; background: var(--white); border-radius: 10px; overflow: hidden; border: 1px solid var(--color-border); transition: transform var(--dur-2) var(--ease-out), box-shadow var(--dur-2) var(--ease-out); display: flex; flex-direction: column; }
+.st-pf-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-3); }
+.st-pf-photo { background-size: cover; background-position: center; min-height: 240px; aspect-ratio: 4/3; position: relative; }
+.st-pf-cat-tag { position: absolute; top: 12px; left: 12px; background: var(--white); color: var(--carbon-950); padding: 5px 10px; border-radius: 4px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+.st-pf-body { padding: 16px 18px 20px; }
+.st-pf-title { font-size: 18px; font-weight: 800; margin: 0 0 4px; line-height: 1.2; color: var(--carbon-950); }
+.st-pf-meta { font-family: var(--font-mono); font-size: 11px; color: var(--color-fg-muted); margin: 0; letter-spacing: 0.02em; }
+
+/* ABOUT */
+.st-about { background: var(--carbon-050); padding: 112px 32px; }
+.st-about-inner { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 5fr 7fr; gap: 80px; align-items: start; }
+.st-about-photo { position: relative; aspect-ratio: 4/5; background: var(--carbon-200); background-size: cover; background-position: center; border-radius: 10px; overflow: hidden; outline: 2px dashed var(--carbon-950); outline-offset: 8px; display: flex; align-items: center; justify-content: center; }
+.st-about-photo-placeholder { color: var(--carbon-400); font-size: 13px; font-family: var(--font-mono); text-align: center; padding: 24px; }
+.st-about-body p { font-size: 18px; line-height: 1.6; color: var(--carbon-700); max-width: 56ch; margin-bottom: 16px; }
+.st-about-body p strong { color: var(--carbon-950); font-weight: 700; }
+.st-about-sig { margin-top: 32px; display: flex; align-items: center; gap: 14px; font-family: var(--font-mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-fg-muted); }
+.st-about-sig::before { content:''; width: 36px; height: 1px; background: var(--carbon-950); }
+
+/* REVIEWS */
+.st-reviews { background: var(--white); padding: 112px 32px; }
+.st-reviews-inner { max-width: 1280px; margin: 0 auto; }
+.st-review-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.st-review { background: var(--carbon-050); border: 1px solid var(--color-border); padding: 28px 24px; border-radius: 10px; display: flex; flex-direction: column; gap: 16px; }
+.st-review-stars { display: flex; gap: 2px; color: var(--st-accent); }
+.st-review-stars svg { width: 16px; height: 16px; fill: currentColor; }
+.st-review-quote { font-size: 18px; line-height: 1.45; color: var(--carbon-950); margin: 0; font-weight: 500; }
+.st-review-byline { display: flex; align-items: center; gap: 12px; font-size: 13px; color: var(--color-fg-muted); margin-top: auto; padding-top: 8px; border-top: 1px dashed var(--carbon-200); }
+.st-review-byline strong { color: var(--carbon-950); font-weight: 700; }
+
+/* CONTACT */
+.st-contact { background: var(--carbon-950); color: var(--white); padding: 120px 32px 96px; position: relative; }
+.st-contact-inner { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 5fr 7fr; gap: 80px; }
+.st-contact-copy h2 { color: var(--white); }
+.st-contact-copy .st-lede { color: rgba(255,255,255,0.78); margin-bottom: 40px; }
+.st-contact-info { display: flex; flex-direction: column; gap: 16px; margin-top: 32px; padding-top: 32px; border-top: 1px dashed rgba(255,255,255,0.2); }
+.st-contact-info-row { display: flex; align-items: center; gap: 14px; font-size: 15px; }
+.st-contact-info-row svg { width: 18px; height: 18px; color: var(--neon-500); flex-shrink: 0; }
+.st-contact-info-row a { color: rgba(255,255,255,0.92); text-decoration: none; }
+.st-contact-info-row a:hover { color: var(--neon-500); }
+.st-contact-form { display: flex; flex-direction: column; gap: 4px; background: var(--white); color: var(--carbon-950); padding: 40px; border-radius: 12px; }
+.st-contact-form label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--carbon-700); margin-top: 18px; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
+.st-contact-form label .req { color: var(--signal-red); }
+.st-input { width: 100%; padding: 12px 14px; border-radius: 6px; border: 1.5px solid var(--carbon-200); font-size: 15px; font-family: inherit; background: var(--white); transition: border-color var(--dur-2) var(--ease-out); }
+.st-input:focus { outline: 3px solid var(--neon-500); outline-offset: 2px; border-color: var(--carbon-950); }
+textarea.st-input { resize: vertical; min-height: 90px; }
+.st-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.st-seg { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.st-seg-btn { background: transparent; border: 1.5px solid var(--carbon-200); padding: 9px 14px; border-radius: 6px; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; cursor: pointer; transition: all var(--dur-2) var(--ease-out); }
+.st-seg-btn:hover { border-color: var(--carbon-950); }
+.st-seg-btn.on { background: var(--carbon-950); color: var(--white); border-color: var(--carbon-950); }
+.st-pref-row { display: flex; gap: 12px; flex-wrap: wrap; }
+.st-pref-check { display: inline-flex; align-items: center; gap: 10px; padding: 12px 16px; border: 1.5px solid var(--carbon-200); border-radius: 8px; cursor: pointer; user-select: none; font-size: 14px; font-weight: 600; transition: all var(--dur-2) var(--ease-out); background: var(--white); flex: 1; min-width: 110px; justify-content: center; }
+.st-pref-check:hover { border-color: var(--carbon-700); }
+.st-pref-check.on { border-color: var(--carbon-950); background: var(--carbon-950); color: var(--white); }
+.st-pref-check input[type="checkbox"] { display: none; }
+.st-contact-form .st-btn { margin-top: 28px; align-self: stretch; justify-content: center; }
+.honeypot { display: none !important; visibility: hidden; }
+.st-form-success { display: none; text-align: center; padding: 60px 24px; flex-direction: column; align-items: center; gap: 8px; }
+.st-form-success.show { display: flex; }
+.st-contact-form.hidden { display: none; }
+.st-form-success-icon { width: 64px; height: 64px; border-radius: 999px; background: var(--st-accent); color: var(--white); display: grid; place-items: center; margin-bottom: 12px; }
+.st-form-success-icon svg { width: 32px; height: 32px; }
+.st-form-success h3 { font-family: var(--font-display); text-transform: uppercase; font-weight: 400; font-size: 56px; line-height: 0.95; margin: 0; color: var(--carbon-950); }
+.st-form-success p { color: var(--color-fg-muted); font-size: 16px; margin: 0; }
+.st-form-error { background: #FEF2F2; border: 1px solid #FECACA; color: #B91C1C; padding: 12px 16px; border-radius: 6px; font-size: 14px; margin-top: 8px; display: none; }
+.st-form-error.show { display: block; }
+
+/* FOOTER */
+.st-footer { background: var(--black); color: var(--white); padding: 56px 32px 28px; border-top: 1px solid var(--carbon-800); }
+.st-footer-inner { display: grid; grid-template-columns: 1fr 2fr; gap: 56px; max-width: 1280px; margin: 0 auto; }
+.st-footer-logo { height: 76px; width: auto; }
+.st-footer-tag { font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.55); margin-top: 14px; max-width: 240px; line-height: 1.4; }
+.st-footer-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.st-footer-cols ul { display: flex; flex-direction: column; gap: 6px; font-size: 14px; color: rgba(255,255,255,0.78); }
+.st-footer-cols a { text-decoration: none; }
+.st-footer-cols a:hover { color: var(--neon-500); }
+.st-footer-bottom { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; max-width: 1280px; margin: 56px auto 0; padding-top: 24px; border-top: 1px dashed var(--carbon-800); font-size: 11px; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.1em; }
+
+/* RESPONSIVE */
+@media (max-width: 960px) {
+  .st-tile-grid { grid-template-columns: repeat(2, 1fr); }
+  .st-pf-grid { grid-template-columns: repeat(2, 1fr); }
+  .st-review-grid { grid-template-columns: 1fr; }
+  .st-about-inner, .st-contact-inner { grid-template-columns: 1fr; gap: 48px; }
+  .st-footer-inner { grid-template-columns: 1fr; }
+  .st-nav-list { display: none; }
+}
+@media (max-width: 640px) {
+  .st-tile-grid { grid-template-columns: 1fr; }
+  .st-pf-grid { grid-template-columns: 1fr; }
+  .st-services, .st-portfolio, .st-about, .st-reviews, .st-contact { padding-left: 20px; padding-right: 20px; }
+  .st-contact-form { padding: 28px 22px; }
+  .st-footer-cols { grid-template-columns: 1fr; gap: 24px; }
+  .st-hero-stamp { right: 20px; bottom: 20px; transform: rotate(-3deg) scale(0.85); transform-origin: bottom right; }
+  .st-row-2 { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="st-nav on-dark" id="main-nav">
+  <a href="#top" class="st-nav-logo">
+    <img src="assets/logo.png" alt="Seam Team" />
+  </a>
+  <ul class="st-nav-list">
+    <li><a href="#work" class="st-nav-link">Work</a></li>
+    <li><a href="#services" class="st-nav-link">Services</a></li>
+    <li><a href="#about" class="st-nav-link">The Shop</a></li>
+  </ul>
+  <a href="tel:+16039013821" class="st-nav-phone">603-901-3821</a>
+  <a href="#contact" class="st-btn st-btn-ink">
+    Contact
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+  </a>
+</nav>
+
+<!-- HERO -->
+<section class="st-hero" id="top">
+  <div class="st-hero-bg">
+    <img src="assets/stitch-orange-on-black.jpg" alt="Upholstery detail" />
+  </div>
+  <div class="st-hero-inner">
+    <p class="st-eyebrow st-eyebrow-light">Auto · Marine · Heavy Equipment</p>
+    <h1 class="st-display st-display-xl">New Hampshire's<br>Auto &amp; Marine<br>Upholstery Team.</h1>
+    <p class="st-lede">Hand-cut, carefully sewn interiors for cars, boats, motorcycles, RVs, power sports, and heavy equipment.</p>
+    <div class="st-hero-cta">
+      <a href="#contact" class="st-btn st-btn-primary st-btn-xl">Get a free quote</a>
+      <a href="#work" class="st-link-arrow">See the work →</a>
+    </div>
+  </div>
+  <div class="st-hero-stamp" aria-hidden="true">
+    <span class="st-stamp-num">100+</span>
+    <span class="st-stamp-lab">Materials &amp;<br>colors</span>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="st-marquee" aria-hidden="true">
+  <div class="st-marquee-track">
+    <span class="st-marquee-item">
+      Marine<span class="st-marquee-dot"></span><span class="muted">Auto</span><span class="st-marquee-dot"></span>Classic<span class="st-marquee-dot"></span><span class="muted">Heavy Equipment</span><span class="st-marquee-dot"></span>Restoration<span class="st-marquee-dot"></span><span class="muted">Custom Stitching</span><span class="st-marquee-dot"></span>
+    </span>
+    <span class="st-marquee-item">
+      Marine<span class="st-marquee-dot"></span><span class="muted">Auto</span><span class="st-marquee-dot"></span>Classic<span class="st-marquee-dot"></span><span class="muted">Heavy Equipment</span><span class="st-marquee-dot"></span>Restoration<span class="st-marquee-dot"></span><span class="muted">Custom Stitching</span><span class="st-marquee-dot"></span>
+    </span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services" class="st-services">
+  <div class="st-section-head-row">
+    <div>
+      <p class="st-eyebrow">What we do</p>
+      <h2 class="st-display st-display-lg">Two people.<br>One&nbsp;obsession.</h2>
+    </div>
+    <p class="st-lede">Premium upholstery for cars, boats and a whole lot more.</p>
+  </div>
+  <div class="st-tile-grid">
+    <a class="st-tile" href="#contact">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3m-4 12H9a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
+      <h3 class="st-tile-title">Auto</h3>
+      <p class="st-tile-sub">Daily drivers and customs.</p>
+      <span class="st-tile-go"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+    </a>
+    <a class="st-tile" href="#contact">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+      <h3 class="st-tile-title">Marine</h3>
+      <p class="st-tile-sub">Helm seats, cushions, tops &amp; enclosures.</p>
+      <span class="st-tile-go"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+    </a>
+    <a class="st-tile" href="#contact">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+      <h3 class="st-tile-title">Heavy Equip.</h3>
+      <p class="st-tile-sub">Cab seats and arm rests rebuilt for longevity.</p>
+      <span class="st-tile-go"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+    </a>
+    <a class="st-tile" href="#contact">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17H5a4 4 0 0 1-4-4V7a2 2 0 0 1 2-2h14l4 4v6a2 2 0 0 1-2 2z"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
+      <h3 class="st-tile-title">Recreational</h3>
+      <p class="st-tile-sub">RV, motorcycle, and powersports.</p>
+      <span class="st-tile-go"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+    </a>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="work" class="st-portfolio">
+  <div class="st-portfolio-inner">
+    <div class="st-section-head-row">
+      <div>
+        <p class="st-eyebrow">Recent work</p>
+        <h2 class="st-display st-display-lg">Out of the&nbsp;shop.</h2>
+      </div>
+      <p class="st-lede">A rolling sample of the last few months on the floor.</p>
+    </div>
+    <div class="st-filter-row" role="tablist" aria-label="Portfolio filter">
+      <button class="st-filter-btn on" data-filter="All" role="tab" aria-selected="true">All <span class="st-filter-count">(9)</span></button>
+      <button class="st-filter-btn" data-filter="Marine" role="tab" aria-selected="false">Marine <span class="st-filter-count">(5)</span></button>
+      <button class="st-filter-btn" data-filter="Auto" role="tab" aria-selected="false">Auto <span class="st-filter-count">(1)</span></button>
+      <button class="st-filter-btn" data-filter="Classic" role="tab" aria-selected="false">Classic <span class="st-filter-count">(2)</span></button>
+      <button class="st-filter-btn" data-filter="Heavy" role="tab" aria-selected="false">Heavy Equip. <span class="st-filter-count">(1)</span></button>
+    </div>
+    <div class="st-pf-grid" id="portfolio-grid">
+      <article class="st-pf-card" data-cat="Marine">
+        <div class="st-pf-photo" style="background-image:url('assets/black-boat-int.PNG')"><span class="st-pf-cat-tag">Marine</span></div>
+        <div class="st-pf-body"><h3 class="st-pf-title">Full Boat Interior</h3><p class="st-pf-meta">MARINE VINYL · RED WELT</p></div>
+      </article>
+      <article class="st-pf-card" data-cat="Marine">
+        <div class="st-pf-photo" style="background-image:url('assets/jetski-top.jpg')"><span class="st-pf-cat-tag">Marine</span></div>
+        <div class="st-pf-body"><h3 class="st-pf-title">Jet Ski Double Seat</h3><p class="st-pf-meta">MARINE VINYL · 2-UP</p></div>
+      </article>
+      <article class="st-pf-card" data-cat="Marine">
+        <div class="st-pf-photo" style="background-image:url('assets/captain-chair.png')"><span class="st-pf-cat-tag">Marine</span></div>
+        <div class="st-pf-body"><h3 class="st-pf-title">Custom Captain's Chair</h3><p class="st-pf-meta">MARINE VINYL · TWO-TONE</p></div>
+      </article>
+      <article class="st-pf-card" data-cat="Classic">
+        <div class="st-pf-photo" style="background-image:url('assets/green-truck-bench.jpg')"><span class="st-pf-cat-tag">Classic</span></div>
+        <div class="st-pf-body"><h3 class="st-pf-title">1960 Ford F100 Bench</h3><p class="st-pf-meta">VINYL · HEAVY DUTY</p></div>
+      </article>
+      <article class="st-pf-card" data-cat="Auto">
+        <div class="st-pf-photo" style="background-image:url('assets/sunbrella-bench.jpg')"><span class="st-pf-cat-tag">Auto</span></div>
+        <div class="st-pf-body"><h3 class="st-pf-title">Custom Bench</h3><p class="st-pf-meta">SUNBRELLA FABRIC</p></div>
+      </article>
+      <article class="st-pf-card" data-cat="Heavy">
+        <div class="st-pf-photo" style="background-image:url('assets/arm-rests.jpg')"><span class="st-pf-cat-tag">Heavy</span></div>
+        <div class="st-pf-body"><h3 class="st-pf-title">John Deere Log Crane Armrests</h3><p class="st-pf-meta">VINYL · COMMERCIAL</p></div>
+      </article>
+      <article class="st-pf-card" data-cat="Marine">
+        <div class="st-pf-photo" style="background-image:url('assets/headrests.jpg')"><span class="st-pf-cat-tag">Marine</span></div>
+        <div class="st-pf-body"><h3 class="st-pf-title">Custom Hot Tub Headrests</h3><p class="st-pf-meta">MARINE-GRADE VINYL</p></div>
+      </article>
+      <article class="st-pf-card" data-cat="Classic">
+        <div class="st-pf-photo" style="background-image:url('assets/purple-bench.jpg')"><span class="st-pf-cat-tag">Classic</span></div>
+        <div class="st-pf-body"><h3 class="st-pf-title">1958 Chevy Del Rey Bucket Seat</h3><p class="st-pf-meta">VINYL · TWO-TONE</p></div>
+      </article>
+      <article class="st-pf-card" data-cat="Marine">
+        <div class="st-pf-photo" style="background-image:url('assets/boat-cushions.png')"><span class="st-pf-cat-tag">Marine</span></div>
+        <div class="st-pf-body"><h3 class="st-pf-title">Boat Cushions</h3><p class="st-pf-meta">VINYL · UV · FOAM</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="st-about">
+  <div class="st-about-inner">
+    <div class="st-about-photo">
+      <div class="st-about-photo-placeholder">📸 Add your shop photo here</div>
+    </div>
+    <div class="st-about-body">
+      <p class="st-eyebrow">Meet the team</p>
+      <h2 class="st-display st-display-lg">A small shop<br>in&nbsp;Chichester.</h2>
+      <p><strong>What began as one visit to a local upholsterer quickly turned into rebuilding the seats of a 1958 Chevy Del Rey</strong> — a project that sparked something bigger than either of us anticipated: a husband-and-wife shop built around creativity and hands-on craftsmanship.</p>
+      <p>Every piece is carefully patterned, hand-cut, and professionally sewn in-house and built with purpose for wherever life takes you.</p>
+      <div class="st-about-sig">Family-run · Chichester, NH</div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="st-reviews">
+  <div class="st-reviews-inner">
+    <div class="st-section-head-row">
+      <div>
+        <p class="st-eyebrow">What folks say</p>
+        <h2 class="st-display st-display-lg">Word of&nbsp;mouth.</h2>
+      </div>
+      <p class="st-lede">Most of our work walks in from a recommendation. Here's a sample.</p>
+    </div>
+    <div class="st-review-grid">
+      <div class="st-review">
+        <div class="st-review-stars">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="st-review-quote">"Quick turn around, much better quality then new ones, cheaper than new ones, and they warranted them for a year. I'm really happy with them!"</p>
+        <div class="st-review-byline"><strong>Jackson R.</strong> <span>· John Deere Log Crane</span></div>
+      </div>
+      <div class="st-review">
+        <div class="st-review-stars">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="st-review-quote">"Awesome, awesome, awesome quality!"</p>
+        <div class="st-review-byline"><strong>Cameron I.</strong> <span>· 2008 Sea-Doo RXT 215</span></div>
+      </div>
+      <div class="st-review">
+        <div class="st-review-stars">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="st-review-quote">"Fantastic attention to detail. I send every single one of my customer interiors to Jordan and Brittney."</p>
+        <div class="st-review-byline"><strong>Kevin W.</strong> <span>· Kustom County Garage</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="st-contact">
+  <div class="st-contact-inner">
+    <div class="st-contact-copy">
+      <p class="st-eyebrow st-eyebrow-light">Get in touch</p>
+      <h2 class="st-display st-display-xl">Tell us<br>what's torn&nbsp;up.</h2>
+      <p class="st-lede">We'll reach out within a business day with a quote range and production schedule.</p>
+      <div class="st-contact-info">
+        <div class="st-contact-info-row">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.54a16 16 0 0 0 6.29 6.29l.91-1.71a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+16039013821">603-901-3821</a>
+        </div>
+        <div class="st-contact-info-row">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:hello@seam-team.com">hello@seam-team.com</a>
+        </div>
+        <div class="st-contact-info-row">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Chichester, NH</span>
+        </div>
+        <div class="st-contact-info-row">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Mon–Fri · 8:00 to 4:00</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORMSPREE FORM -->
+    <div id="contact-form-wrap">
+      <form
+        class="st-contact-form"
+        id="contact-form"
+        action="https://formspree.io/f/xbdwwnzv"
+        method="POST"
+      >
+        <!-- Honeypot spam field -->
+        <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off" />
+
+        <!-- Hidden fields for Formspree routing -->
+        <input type="hidden" name="_subject" value="New quote request from Seam Team website" />
+        <input type="hidden" name="_cc" value="6037319606@vtext.com" />
+
+        <label>Name <span class="req">*</span></label>
+        <input class="st-input" type="text" name="name" required placeholder="First and last" />
+
+        <div class="st-row-2">
+          <div>
+            <label>Phone <span class="req">*</span></label>
+            <input class="st-input" type="tel" name="phone" required placeholder="(555) 123-4567" />
+          </div>
+          <div>
+            <label>Email</label>
+            <input class="st-input" type="email" name="email" placeholder="you@email.com" />
+          </div>
+        </div>
+
+        <label>Vehicle type</label>
+        <div class="st-seg" id="vehicle-seg">
+          <button type="button" class="st-seg-btn on" data-val="Marine">Marine</button>
+          <button type="button" class="st-seg-btn" data-val="Auto">Auto</button>
+          <button type="button" class="st-seg-btn" data-val="Classic">Classic</button>
+          <button type="button" class="st-seg-btn" data-val="Heavy">Heavy</button>
+          <button type="button" class="st-seg-btn" data-val="Other">Other</button>
+        </div>
+        <input type="hidden" name="vehicle_type" id="vehicle-type-input" value="Marine" />
+
+        <label>What needs doing</label>
+        <textarea class="st-input" name="message" rows="3" placeholder="Year, make, model — and what you're seeing."></textarea>
+
+        <label>How should we reach you? <span style="color:#9a9a9a;font-weight:500;text-transform:none;letter-spacing:0">(pick any)</span></label>
+        <div class="st-pref-row" id="pref-row">
+          <label class="st-pref-check on" id="pref-phone-label">
+            <input type="checkbox" name="contact_preference[]" value="Phone call" checked />
+            Phone call
+          </label>
+          <label class="st-pref-check" id="pref-email-label">
+            <input type="checkbox" name="contact_preference[]" value="Email" />
+            Email
+          </label>
+          <label class="st-pref-check" id="pref-text-label">
+            <input type="checkbox" name="contact_preference[]" value="Text me" />
+            Text me
+          </label>
+        </div>
+
+        <label>How'd you hear about us?</label>
+        <input class="st-input" type="text" name="referral" placeholder="Word of mouth, Google, referral…" />
+
+        <div class="st-form-error" id="form-error">Something went wrong. Please try again or call us directly.</div>
+
+        <button class="st-btn st-btn-primary st-btn-xl" type="submit" id="submit-btn">
+          Send to the shop
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </form>
+
+      <div class="st-contact-form st-form-success" id="form-success">
+        <div class="st-form-success-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3>Got it.</h3>
+        <p>We'll reach out within one business day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="st-footer">
+  <div class="st-footer-inner">
+    <div>
+      <img src="assets/logo.png" alt="Seam Team" class="st-footer-logo" />
+      <p class="st-footer-tag">Auto &amp; Marine Upholstery</p>
+    </div>
+    <div class="st-footer-cols">
+      <div>
+        <p class="st-eyebrow st-eyebrow-light st-eyebrow-plain">Shop</p>
+        <ul>
+          <li><a href="#services">Auto</a></li>
+          <li><a href="#services">Marine</a></li>
+          <li><a href="#services">Classic</a></li>
+          <li><a href="#services">Heavy Equipment</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="st-eyebrow st-eyebrow-light st-eyebrow-plain">Visit</p>
+        <ul>
+          <li>Chichester, NH</li>
+          <li>Mon–Fri · 8:00 to 4:00</li>
+        </ul>
+      </div>
+      <div>
+        <p class="st-eyebrow st-eyebrow-light st-eyebrow-plain">Reach us</p>
+        <ul>
+          <li><a href="tel:+16039013821">603-901-3821</a></li>
+          <li><a href="mailto:hello@seam-team.com">hello@seam-team.com</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="st-footer-bottom">
+    <span>© 2026 Seam Team LLC</span>
+    <span>Chichester, New Hampshire</span>
+  </div>
+</footer>
+
+<script>
+// ── NAV SCROLL SPY ─────────────────────────────────────────────
+const nav = document.getElementById('main-nav');
+const navLinks = document.querySelectorAll('.st-nav-link');
+const sections = ['top','work','services','about','contact'];
+
+function updateNav() {
+  const y = window.scrollY + 120;
+  // Dark nav only when hero is visible
+  const heroEl = document.getElementById('top');
+  const heroBottom = heroEl.offsetTop + heroEl.offsetHeight;
+  if (window.scrollY < heroBottom - 80) {
+    nav.classList.add('on-dark');
+  } else {
+    nav.classList.remove('on-dark');
+  }
+  // Active link
+  let cur = 'top';
+  for (const id of sections) {
+    const el = document.getElementById(id);
+    if (el && el.offsetTop <= y) cur = id;
+  }
+  navLinks.forEach(l => {
+    l.classList.toggle('on', l.getAttribute('href') === '#' + cur);
+  });
+}
+window.addEventListener('scroll', updateNav, { passive: true });
+updateNav();
+
+// ── SMOOTH SCROLL NAV ──────────────────────────────────────────
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href').slice(1);
+    const el = id === 'top' ? document.body : document.getElementById(id);
+    if (el) {
+      e.preventDefault();
+      if (id === 'top') window.scrollTo({ top: 0, behavior: 'smooth' });
+      else el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+// ── PORTFOLIO FILTER ───────────────────────────────────────────
+const filterBtns = document.querySelectorAll('.st-filter-btn');
+const cards = document.querySelectorAll('.st-pf-card');
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => { b.classList.remove('on'); b.setAttribute('aria-selected','false'); });
+    btn.classList.add('on'); btn.setAttribute('aria-selected','true');
+    const f = btn.dataset.filter;
+    cards.forEach(c => {
+      c.style.display = (f === 'All' || c.dataset.cat === f) ? '' : 'none';
+    });
+  });
+});
+
+// ── VEHICLE TYPE SEGMENTED ─────────────────────────────────────
+const segBtns = document.querySelectorAll('#vehicle-seg .st-seg-btn');
+const vehicleInput = document.getElementById('vehicle-type-input');
+segBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    segBtns.forEach(b => b.classList.remove('on'));
+    btn.classList.add('on');
+    vehicleInput.value = btn.dataset.val;
+  });
+});
+
+// ── CONTACT PREFERENCE CHECKBOXES ─────────────────────────────
+['phone','email','text'].forEach(key => {
+  const label = document.getElementById('pref-' + key + '-label');
+  const cb = label.querySelector('input[type="checkbox"]');
+  label.addEventListener('click', () => {
+    label.classList.toggle('on');
+  });
+  cb.addEventListener('change', () => {
+    label.classList.toggle('on', cb.checked);
+  });
+});
+
+// ── FORMSPREE AJAX SUBMIT ──────────────────────────────────────
+const form = document.getElementById('contact-form');
+const successBox = document.getElementById('form-success');
+const errorBox = document.getElementById('form-error');
+const submitBtn = document.getElementById('submit-btn');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  errorBox.classList.remove('show');
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending…';
+
+  const data = new FormData(form);
+
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      form.classList.add('hidden');
+      successBox.classList.add('show');
+    } else {
+      throw new Error('Server error');
+    }
+  } catch (err) {
+    errorBox.classList.add('show');
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = 'Send to the shop <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>';
+  }
+});
+</script>
+</body>
+</html>
