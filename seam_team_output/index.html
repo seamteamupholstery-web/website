@@ -226,7 +226,7 @@ a { color: inherit; }
 .st-about { background: var(--carbon-050); padding: 112px 32px; }
 .st-about-inner { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 5fr 7fr; gap: 80px; align-items: start; }
 .st-about-photo { position: relative; aspect-ratio: 4/5; background: var(--carbon-200); background-size: cover; background-position: center; border-radius: 10px; overflow: hidden; outline: 2px dashed var(--carbon-950); outline-offset: 8px; display: flex; align-items: center; justify-content: center; }
-.st-about-photo-placeholder { color: var(--carbon-400); font-size: 13px; font-family: var(--font-mono); text-align: center; padding: 24px; }
+
 .st-about-body p { font-size: 18px; line-height: 1.6; color: var(--carbon-700); max-width: 56ch; margin-bottom: 16px; }
 .st-about-body p strong { color: var(--carbon-950); font-weight: 700; }
 .st-about-sig { margin-top: 32px; display: flex; align-items: center; gap: 14px; font-family: var(--font-mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-fg-muted); }
@@ -461,8 +461,7 @@ textarea.st-input { resize: vertical; min-height: 90px; }
 <!-- ABOUT -->
 <section id="about" class="st-about">
   <div class="st-about-inner">
-    <div class="st-about-photo">
-      <div class="st-about-photo-placeholder">📸 Add your shop photo here</div>
+    <div class="st-about-photo" style="background-image:url('assets/the-team.png'); background-size:cover; background-position:center;">
     </div>
     <div class="st-about-body">
       <p class="st-eyebrow">Meet the team</p>
